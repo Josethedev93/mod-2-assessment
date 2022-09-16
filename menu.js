@@ -32,7 +32,14 @@
 
 //CODE HERE
 
-
+const pizza = {
+    name : 'pepperoni',
+    price : 8.99,
+    category : 'entree',
+    popularity : 100,
+    rating : 5,
+    tags : ['cheese', 'yummy', 'pepperoni',]
+}
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+const { price } = pizza;
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+const { category } = pizza;
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,8 +97,21 @@
 */
 
 //CODE HERE
-
-
+const foodArr = [{
+        name : 'pepperoni',
+        price : 8.99,
+        category : 'entree',
+        popularity : 100,
+        rating : 5,
+        tags : ['cheese', 'yummy', 'pepperoni',]
+},{
+    name : 'sausage0',
+    price : 8.99,
+    category : 'entree',
+    popularity : 100,
+    rating : 1,
+    tags : ['cheese', 'yummy', 'sausage',]
+}]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,7 +127,7 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((food) => food.tags.includes('yummy'))
 
 
 
@@ -150,6 +172,19 @@
 
 //CODE HERE
 
+
+const filterByProperty = (property, num, type) => {
+    const filteredArr = foodArr.filter((food) => {
+     if(type === 'above'){
+       return food[property] > num;
+     } else {
+        return food[property] < num;
+     }
+    })
+    return filteredArr
+}
+
+console.log(filterByProperty('popularity', 2, 'above'))
 
 /*
     Invoke the `filterByProperty` function passing
