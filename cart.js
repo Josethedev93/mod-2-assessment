@@ -55,17 +55,12 @@ console.log(summedPrice)
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
-
-function calcFinalPrice(cartTotal, couponValue){
-    return cartTotal - couponValue;
+//CODE 
+const calcFinalPrice = (cartTotal, couponValue, tax) =>{
+     const tax = cartTotal * tax;
+     return cartTotal + tax - couponValue
 }
 
-const cartTotal = summedPrice
-const couponValue = 1.50
-const tax = .06
-
-console.log(calcFinalPrice(summedPrice))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -88,7 +83,8 @@ console.log(calcFinalPrice(summedPrice))
 
 /*
     TEXT ANSWER HERE
-
+the customer object will have a name, height, age, race
+these are main data types for people
 */
 
 /*
@@ -97,3 +93,9 @@ console.log(calcFinalPrice(summedPrice))
 */
 
 //CODE HERE
+const customer = {
+    name : 'jose',
+    height : '5 foot 11 inches',
+    age : '28',
+    race : 'hispanic'
+}
