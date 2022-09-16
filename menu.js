@@ -105,13 +105,34 @@ const foodArr = [{
         rating : 5,
         tags : ['cheese', 'yummy', 'pepperoni',]
 },{
-    name : 'sausage0',
+    name : 'sausage',
     price : 8.99,
     category : 'entree',
     popularity : 100,
     rating : 1,
     tags : ['cheese', 'yummy', 'sausage',]
-}]
+},{name : 'hawaiin',
+    price : 8.99,
+    category : 'entree',
+    popularity : 100,
+    rating : 8,
+    tags : ['cheese', 'yummy', 'hawaiin',]
+},{
+    name : 'cheese',
+    price : 8.99,
+    category : 'entree',
+    popularity : 100,
+    rating : 10,
+    tags : ['cheese', 'yummy',]
+},{
+    name : 'anchovie',
+    price : 8.99,
+    category : 'entree',
+    popularity : 0,
+    rating : 0,
+    tags : ['cheese', 'yummy', 'anchovie',]
+}
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
